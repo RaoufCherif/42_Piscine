@@ -53,3 +53,17 @@ lrwxrwxrwx 1 codephenix4 codephenix4     5 juin  10 14:33 test6 -> test0
 
  tar -cf exo2.tar ex02
  tar -cf test.tar test 
+
+#Créer un fichier bash
+extension .sh 
+les fichier executbale commence par la ligne suivante:    
+`#!/bin/bash`
+ 
+votre code 
+
+
+
+exit le fichier et changer les permission afin que le fichier soit executable.
+
+pour executer le script tapper la commande suivante : 
+`bash nomDuFichier` 
