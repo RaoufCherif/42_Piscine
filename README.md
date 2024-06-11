@@ -66,4 +66,22 @@ votre code
 exit le fichier et changer les permission afin que le fichier soit executable.
 
 pour executer le script tapper la commande suivante : 
-`bash nomDuFichier` 
+`bash nomDuFichier`
+
+#Afficher le contenue d'un fichier avec des espace et des saut de ligne:
+`cat -e nomduFichier`
+
+
+#Lancer un script bash et afficher le contenu avec des espace et des saut de ligne :
+`bash nomDuFichier | cat -e `
+
+### Patch() 
+#La methode patch() est utiliser pour mettre à jours un fichier à partir d'un autre fichier example:
+
+`echo bonjour > a.txt`
+`echo Bonjour Mme, Monsieur > b.txt`
+`diff --normal a.txt b.txt > ab.diff`
+`patch  a.txt ab.diff`
+`diff a.txt b.txt`
+   
+ 
