@@ -1,0 +1,2 @@
+ find ./sh00 -type f \( -name '~*' -o -name '*~' -o -name '#*' -o -name '*#' \)
+

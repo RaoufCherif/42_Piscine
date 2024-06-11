@@ -84,4 +84,20 @@ pour executer le script tapper la commande suivante :
 `patch  a.txt ab.diff`
 `diff a.txt b.txt`
    
- 
+###FIND
+#find C'est la commande utilisée pour rechercher des fichiers et des répertoires dans un répertoire spécifié et ses sous-répertoires.
+example: 
+
+`find /path/to/search -type f \( -name '#*' -o -name '*~' \)` 
+
+/path/to/search : Ceci est le chemin du répertoire de départ pour la recherche. Vous devez remplacer /path/to/search par le chemin réel du répertoire où vous souhaitez effectuer la recherche.
+
+-type f : Cela restreint la recherche aux fichiers uniquement (f pour files). Si vous souhaitez rechercher des répertoires, vous pouvez utiliser -type d (d pour directories).
+
+\( et \) : Ces parenthèses sont utilisées pour regrouper les conditions de recherche. Les parenthèses sont échappées (\) pour indiquer à la ligne de commande qu'elles font partie de la commande find et non du shell.
+
+-name '#*' : Cette condition correspond aux fichiers dont le nom commence par #. Le * est un caractère générique qui représente zéro ou plusieurs caractères.
+
+-o : C'est l'opérateur OR (ou) utilisé pour combiner plusieurs conditions. Si l'une des conditions est vraie, le fichier sera inclus dans les résultats.
+
+-name '*~' : Cette condition correspond aux fichiers dont le nom se termine par ~. De nouveau, le * est un caractère générique qui représente zéro ou plusieurs caractères. 
