@@ -62,21 +62,20 @@ les fichier executbale commence par la ligne suivante:
 votre code 
 
 
+exit le fichier et change les permissions afin que le fichier soit exécutable.
 
-exit le fichier et changer les permission afin que le fichier soit executable.
-
-pour executer le script tapper la commande suivante : 
+Pour exécuter le script, tapez la commande suivante :
 `bash nomDuFichier`
 
-#Afficher le contenue d'un fichier avec des espace et des saut de ligne:
+#Afficher le contenu d'un fichier avec des espaces et un saut de ligne :
 `cat -e nomduFichier`
 
 
-#Lancer un script bash et afficher le contenu avec des espace et des saut de ligne :
+#Lancer un script bash et afficher le contenu avec des espaces et des sauts de lignes :
 `bash nomDuFichier | cat -e `
 
 ### Patch() 
-#La methode patch() est utiliser pour mettre à jours un fichier à partir d'un autre fichier example:
+#La méthode patch() est utilisée pour mettre à jour un fichier à partir d'un autre fichier, par exemple:
 
 `echo bonjour > a.txt`
 `echo Bonjour Mme, Monsieur > b.txt`
@@ -86,7 +85,7 @@ pour executer le script tapper la commande suivante :
    
 ###FIND
 #find C'est la commande utilisée pour rechercher des fichiers et des répertoires dans un répertoire spécifié et ses sous-répertoires.
-example: 
+exemple - 1 : 
 
 `find /path/to/search -type f \( -name '#*' -o -name '*~' \)` 
 
@@ -101,3 +100,14 @@ example:
 -o : C'est l'opérateur OR (ou) utilisé pour combiner plusieurs conditions. Si l'une des conditions est vraie, le fichier sera inclus dans les résultats.
 
 -name '*~' : Cette condition correspond aux fichiers dont le nom se termine par ~. De nouveau, le * est un caractère générique qui représente zéro ou plusieurs caractères. 
+
+exemple 2 : la commande suivante nous permet de chercher un fichier et le supprimer si existe.
+
+`find . -type f -name "*~" -print -delete -o -type f -name "\#*\#" -print -delete`
+
+#Pour afficher la liste des utilisateurs dans la variable d'environnement FT_USER  avec la commande suivante : 
+`groups $FT_USER | tr ' ' ','`
+ 
+#Pour afficher les groupes d'utilisateurs sur  une seule ligne séparés par des virgules.
+`id -G -n $FT_USER | tr ' ' ',' | tr -d '\n'`
+
