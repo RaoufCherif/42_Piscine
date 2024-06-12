@@ -137,3 +137,12 @@ s/ démarre une substitution.
 \.[^.]*$ correspond à un point suivi de n'importe quel caractère sauf un point (qui représente l'extension du fichier) jusqu'à la fin de la ligne ($).
 // remplace l'extension trouvée par une chaîne vide (la supprime).
 
+
+#Find pour compter les fichiers et les répertoirs :
+`find . -type f -o -type d | wc -l`   
+
+#Find pour compter les fichiers  :
+`find . -type f | wc -l`
+
+#Find pour compter les répertoirs  :
+`find . -type d | wc -l`
