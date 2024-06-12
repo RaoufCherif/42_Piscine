@@ -155,3 +155,14 @@ cette commande affiche tous les adresse MAC
 
 Une adresse MAC (Media Access Control address) est un identifiant unique attribué à une interface réseau pour les communications sur le segment physique d'un réseau.
 
+#SKIP
+Pour afficher une ligne sur deux à partir de la première ligne de la sortie de ls -l
+
+`ls -l | awk 'NR % 2 == 1'`
+
+Explication de la commande
+ls -l : Liste les fichiers et répertoires dans le répertoire courant avec des détails tels que les permissions, le nombre de liens, le propriétaire, le groupe, la taille, la date et le nom.
+| (pipe) :  Le symbole | redirige la sortie de ls -l vers awk.
+awk 'NR % 2 == 1' : awk est un langage de traitement de texte qui permet de manipuler et analyser des fichiers ligne par ligne.
+NR est une variable spéciale d'awk qui représente le numéro de la ligne en cours de traitement.
+NR % 2 == 1 signifie que la condition est vraie pour les lignes dont le numéro est impair. Ainsi, awk imprimera seulement les lignes impaires, commençant par la première ligne.
