@@ -146,3 +146,12 @@ s/ démarre une substitution.
 
 #Find pour compter les répertoirs  :
 `find . -type d | wc -l`
+
+#ifconfig  est une commande utilisée pour configurer et afficher les interfaces réseau sur les systèmes Unix et Linux.
+
+`ifconfig | grep -o -E '([[:xdigit:]]{2}:){5}[[:xdigit:]]{2}'` 
+
+cette commande affiche tous les adresse MAC
+
+Une adresse MAC (Media Access Control address) est un identifiant unique attribué à une interface réseau pour les communications sur le segment physique d'un réseau.
+
