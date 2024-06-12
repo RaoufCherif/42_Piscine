@@ -111,3 +111,29 @@ exemple 2 : la commande suivante nous permet de chercher un fichier et le suppri
 #Pour afficher les groupes d'utilisateurs sur  une seule ligne séparés par des virgules.
 `id -G -n $FT_USER | tr ' ' ',' | tr -d '\n'`
 
+#Find: pour afficher que les noms des fichiers sans les extensions et le path complet ont utilise la commande suivante :  
+
+
+`find ./  -type f -name "*.tar" -exec basename {} \; | sed 's/\.[^.]*$//'`
+
+Explication de la commande
+find /path/to/search -type f -name "*.*" :
+
+find est utilisé pour rechercher des fichiers.
+/path/to/search est le répertoire de recherche (remplacez-le par le chemin réel où vous voulez rechercher).
+-type f indique que nous recherchons des fichiers (files).
+-name "*.*" limite les résultats aux fichiers ayant une extension.
+-exec basename {} \; :
+
+-exec exécute une commande sur chaque fichier trouvé.
+basename {} extrait le nom de base du fichier (sans le chemin).
+{} est remplacé par chaque fichier trouvé.
+\; termine la commande -exec.
+| sed 's/\.[^.]*$//' :
+
+Le pipe | redirige la sortie de find vers sed.
+sed 's/\.[^.]*$//' utilise une expression régulière pour supprimer l'extension de chaque nom de fichier.
+s/ démarre une substitution.
+\.[^.]*$ correspond à un point suivi de n'importe quel caractère sauf un point (qui représente l'extension du fichier) jusqu'à la fin de la ligne ($).
+// remplace l'extension trouvée par une chaîne vide (la supprime).
+
