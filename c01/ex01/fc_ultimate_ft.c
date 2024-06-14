@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c ex07                                    :+      :+:    :+:   */
+/*   ft_ft.c ex01                                        :+      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: YC Raouf <raouf19raouf@gmail.com           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -9,38 +9,49 @@
 /*   Updated: 2024/03/30 21:55:40 by cmassol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
+#include <stdio.h>
 
-void	ft_putnbr(int nb)
+void	ft_ultimate_ft(int *********nbr)
 {
-	char	c;
-
-	if (nb == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-	}
-	if (nb < 0)
-	{
-		write(1, "-", 1);
-		nb = nb * -1;
-		ft_putnbr(nb);
-	}
-	else if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else if (nb < 10)
-	{
-		c = nb + '0';
-		write(1, &c, 1);
-	}
+	*********nbr = 42;
 }
 
 int	main(void)
 {
-	ft_putnbr(25123);
-	ft_putnbr(-8);
+	int	a;
+	void	*ptr[9];
+	:w
+
+	a = 1;
+	ptr[0] = &a;
+	for (int i = 1; i <= 9; i + 1)
+	{
+		ptr[i] = &ptr[i - 1]
+	}
+		printf("%i\n", a);
+		ft_ultimate_ft(ptr[8]);
+		printf("%i\n", a);
 	return (0);
 }
+/*
+int     main(void)
+ {
+         int     a;
+         a = 1;  
+         int     *p1 = &a;
+         int     **p2 = &p1;
+         int     ***p3 = &p2;
+         int     ****p4 = &p3;
+         int     *****p5 = &p4;
+         int     ******p6 = &p5;
+         int     *******p7 = &p6;
+         int     ********p8 = &p7;
+         int     *********p9 = &p8;
+  
+         printf("%i\n", a);
+         ft_ultimate_ft(p9);
+         printf("%i\n", a);
+         return (0);
+ }
+ */
