@@ -10,19 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>  // Pour la fonction write
+#include <stdio.h>  // Pour la fonction write
 
-void	ft_putstr(char *str)
+int	ft_strlen(char *str)
 {
-	while (*str)
-	{
-		write (1, str++, 1);
-	}
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
+
+#include <stdio.h>
 
 int	main(void)
 {
-//   const char str = "Bonjour, monde!\n";
-	ft_putstr("trat\n");
-//    write(STDOUT_FILENO, str, strlen(str));
+	printf("%i", ft_strlen("Coucou!"));
 	return (0);
 }
