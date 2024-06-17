@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c ex02                                        :+      :+:    :+:   */
+/*   ft_ultimate_div_mod.c ex04                          :+      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: YC Raouf <raouf19raouf@gmail.com           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,24 +12,31 @@
 #include <unistd.h>
 #include <stdio.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
-{
-	*div = (a / b);
-	*mod = (a % b);
+void	ft_ultimate_div_mod(int *a, int *b)
+{	
+	int	div;
+	int	mod;	
+	
+	div  = *a / *b;	
+	mod = *a % *b;
+	*a = div;
+	*b = mod;
+	
 
 
 }
-
 int	main(void)
-{
+{	
 	int	a;
 	int	b;
-	int	mod;
-	int	div;
-	a = 42;
-	b = 5;
-	ft_div_mod(a, b, &div , &mod);
-	printf("%i\n" , mod);
-	printf("%i\n" , div); 
+
+ 	a = 10;
+	b = 2;	
+	printf("a=%i\nb=%i\n ", a,b);
+      ft_ultimate_div_mod(&a,&b); 
+	printf("a/b=%i\na%%b=%i\n ", a,b);
+	//ft_ultimate_div_mod();
+	
 	return (0);
 }
+
