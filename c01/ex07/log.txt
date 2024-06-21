@@ -1,0 +1,9 @@
+Script started on 2024-06-21 09:50:57+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="105" LINES="57"]
+[?2004h(base) ]0;codephenix4@codephenix4-ThinkPad-X260: ~/codephenix/42_Piscine/c01/ex07[01;32mcodephenix4@codephenix4-ThinkPad-X260[00m:[01;34m~/codephenix/42_Piscine/c01/ex07[00m$ echo Bonjour
+[?2004lBonjour
+[?2004h(base) ]0;codephenix4@codephenix4-ThinkPad-X260: ~/codephenix/42_Piscine/c01/ex07[01;32mcodephenix4@codephenix4-ThinkPad-X260[00m:[01;34m~/codephenix/42_Piscine/c01/ex07[00m$ odfogdf
+[?2004lodfogdf: command not found
+[?2004h(base) ]0;codephenix4@codephenix4-ThinkPad-X260: ~/codephenix/42_Piscine/c01/ex07[01;32mcodephenix4@codephenix4-ThinkPad-X260[00m:[01;34m~/codephenix/42_Piscine/c01/ex07[00m$ exit
+[?2004lexit
+
+Script done on 2024-06-21 09:51:25+02:00 [COMMAND_EXIT_CODE="127"]
